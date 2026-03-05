@@ -427,7 +427,7 @@ export const transformPreview = (
     try {
       const content = fs.readFileSync(componentVuePath, 'utf-8');
       const base64Content = utoa(JSON.stringify({ 'App.vue': content }));
-      return `${playgroundUrl}${base64Content}`;
+      return `${playgroundUrl}/#${base64Content}`;
     } catch (e) {
       return '';
     }
